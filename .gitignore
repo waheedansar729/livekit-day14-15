@@ -1,0 +1,12 @@
+# Environment / Secret files
+.env
+backend/.env
+
+# Python Virtual Environment
+venv/
+backend/venv/
+
+# Python Cache files
+__pycache__/
+*/__pycache__/
+*.pyc
