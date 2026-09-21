@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LiveKit Day 14-15</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/livekit-client/dist/livekit-client.umd.min.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>🎙️ LiveKit Video Room</h1>
+        <p>Day 14 & 15 — Real-Time Communication Demo</p>
+    </header>
+
+    <div class="controls">
+
+        <input
+            id="roomName"
+            type="text"
+            value="day14-room"
+            placeholder="Room name"
+        >
+
+        <input
+            id="identity"
+            type="text"
+            placeholder="Your name"
+        >
+
+        <button id="joinBtn">Join Room</button>
+
+        <button id="leaveBtn" disabled>Leave</button>
+
+    </div>
+
+    <div id="status" class="status">
+        🔴 Disconnected
+    </div>
+
+    <section>
+        <h2>My Camera</h2>
+        <div id="localVideo" class="video-grid"></div>
+    </section>
+
+    <section>
+        <h2>Remote Participants</h2>
+        <div id="remoteVideos" class="video-grid"></div>
+    </section>
+
+    <section class="chat">
+
+        <h2>💬 Room Chat</h2>
+
+        <div id="messages"></div>
+
+        <div class="chat-controls">
+
+            <input
+                id="chatInput"
+                type="text"
+                placeholder="Type a message..."
+            >
+
+            <button id="sendBtn">Send</button>
+
+        </div>
+
+    </section>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
